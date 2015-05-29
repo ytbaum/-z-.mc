@@ -45,5 +45,4 @@ library(FNN)
 ks <- c(1,3,5,7,15)
 knn.precs <- sapply(ks, knn.prec.at.k, train = train.predictors, test = test.predictors,
        cl = train.resp, true.values = test.resp)
-precs.string <- paste(knn.precs, collapse = ' ')
-print(paste("Precisions of knn classifier's predictions on testing set:", precs.string))
+Map(print.knn.prec, ks, knn.precs)

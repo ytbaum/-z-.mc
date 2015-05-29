@@ -22,3 +22,10 @@ knn.prec.at.k <- function(k, train, test, cl, true.values)
   
   prec  
 }
+
+print.knn.prec <- function(k, prec)
+{
+  output <- paste("Precision of knn classifier's predictions on testing set at k = ", k, ": ", prec, sep="")
+  print(output)
+  
+}
